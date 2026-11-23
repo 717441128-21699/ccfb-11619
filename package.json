@@ -1,0 +1,14 @@
+{
+  "name": "dou-fengzheng",
+  "private": true,
+  "version": "0.1.0",
+  "description": "斗风筝 —— 双线割线对战小游戏 (Canvas + TypeScript)",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --outfile=game.js --format=iife --target=es2020",
+    "verify": "esbuild test/verify.ts --bundle --outfile=verify.mjs --format=esm --platform=node --target=node20 && node verify.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

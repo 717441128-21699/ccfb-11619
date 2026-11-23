@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>斗风筝</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<!-- 风筝选择页 -->
+<div id="page-select" class="page">
+  <h1>斗风筝</h1>
+  <p class="sub">升力、阻力、线的张力，一样都不能少 —— 放线收线，借风割线。</p>
+  <h2>选风筝</h2>
+  <div id="kite-list" class="card-row"></div>
+  <h2>选线</h2>
+  <div id="line-list" class="card-row"></div>
+  <div class="btn-row">
+    <button id="btn-test" class="big">试 飞</button>
+    <button id="btn-battle" class="big primary">开始对战</button>
+    <button id="btn-records" class="big">战 绩</button>
+  </div>
+</div>
+
+<!-- 战绩页 -->
+<div id="page-records" class="page" hidden>
+  <h1>战 绩</h1>
+  <p id="records-summary" class="sub"></p>
+  <table id="records-table">
+    <thead><tr><th>日期</th><th>我方</th><th>线</th><th>对方</th><th>结果</th><th>用时</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div class="btn-row"><button id="btn-records-back" class="big">返 回</button></div>
+</div>
+
+<!-- 对战结束浮层 -->
+<div id="overlay-result" class="overlay" hidden>
+  <div class="panel">
+    <h1 id="result-title"></h1>
+    <p id="result-detail"></p>
+    <div class="btn-row">
+      <button id="btn-again" class="big primary">再来一局</button>
+      <button id="btn-back-select" class="big">返回选筝</button>
+    </div>
+  </div>
+</div>
+
+<!-- 游戏内返回按钮 -->
+<button id="btn-exit" class="corner" hidden>✕ 退出</button>
+
+<script src="game.js"></script>
+</body>
+</html>
